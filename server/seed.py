@@ -38,13 +38,3 @@ with app.app_context():
     bio2 = Bio(bio_text="AI researcher focusing on machine learning and data ethics.", speaker=speaker2)
     bio3 = Bio(bio_text="Software engineer passionate about teaching and open source.", speaker=speaker3)
     db.session.add_all([bio1, bio2, bio3])
-    db.session.commit()
-
-    # Associate Speakers and Sessions
-    session1.speakers.append(speaker1)
-    session2.speakers.append(speaker2)
-    session2.speakers.append(speaker3)
-    session3.speakers.append(speaker2)
-    db.session.commit()
-
-    print("🌱 Database seeded successfully!")
